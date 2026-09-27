@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "FrictionFlow — AI Learning Companion",
+  "version": "1.0.0",
+  "description": "Proactive friction detection & progressive hint assistant for programming students on LeetCode, Codeforces, and GitHub.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "alarms",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.leetcode.com/*",
+    "*://leetcode.com/*",
+    "*://*.codeforces.com/*",
+    "*://codeforces.com/*",
+    "*://*.github.com/*",
+    "*://github.com/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.leetcode.com/*",
+        "*://leetcode.com/*",
+        "*://*.codeforces.com/*",
+        "*://codeforces.com/*",
+        "*://*.github.com/*",
+        "*://github.com/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": ["adapters/platform_adapter.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "FrictionFlow Companion"
+  }
+}

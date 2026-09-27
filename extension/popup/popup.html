@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrictionFlow Companion</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">
+        <div class="logo-icon">🧠</div>
+        <div>
+          <h1 class="title">FrictionFlow</h1>
+          <span class="subtitle">AI Learning Companion</span>
+        </div>
+      </div>
+      <div class="status-indicator" title="Companion Active">
+        <span class="status-dot"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-label">ACTIVE CODING SESSION</span>
+        <span id="friction-badge" class="badge badge-low">Low Friction</span>
+      </div>
+
+      <div class="problem-meta">
+        <div id="prob-title" class="prob-title">Two Sum</div>
+        <div id="platform-name" class="platform-chip">LeetCode</div>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-box">
+          <span class="metric-value" id="session-time">0m</span>
+          <span class="metric-label">Duration</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-value" id="attempts-count">1</span>
+          <span class="metric-label">Attempts</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-value" id="friction-score">15</span>
+          <span class="metric-label">Struggle Index</span>
+        </div>
+      </div>
+
+      <div class="hint-section">
+        <div class="section-title">PROGRESSIVE HINTS</div>
+        <div class="hint-buttons">
+          <button id="btn-hint-1" class="btn-hint lvl-1" title="Get high-level conceptual hint">
+            <span class="hint-icon">💡</span>
+            <div class="hint-text">
+              <span class="hint-title">Level 1: Concept</span>
+              <span class="hint-sub">General direction & intuition</span>
+            </div>
+          </button>
+          <button id="btn-hint-2" class="btn-hint lvl-2" title="Get approach strategy hint">
+            <span class="hint-icon">🔍</span>
+            <div class="hint-text">
+              <span class="hint-title">Level 2: Strategy</span>
+              <span class="hint-sub">Data structure & algorithm choice</span>
+            </div>
+          </button>
+          <button id="btn-hint-3" class="btn-hint lvl-3" title="Get logic guidance hint">
+            <span class="hint-icon">💻</span>
+            <div class="hint-text">
+              <span class="hint-title">Level 3: Logic</span>
+              <span class="hint-sub">Implementation step-by-step guidance</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-chat" class="btn-primary">
+          💬 Open In-Page AI Assistant
+        </button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="privacy-text">
+        🔒 FrictionFlow Assistant • Zero Distraction Guidance
+      </p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
